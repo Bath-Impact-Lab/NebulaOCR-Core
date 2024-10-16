@@ -16,7 +16,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the project files
 COPY . .
 
-EXPOSE 80
+EXPOSE 8000
+
+# Set the PORT environment variable if not already set
+ENV PORT 8000
 
 # Command to run the OCR script (adjust as needed)
 CMD ["python3", "main.py"]
