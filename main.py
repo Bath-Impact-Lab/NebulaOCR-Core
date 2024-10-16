@@ -25,9 +25,10 @@ app = FastAPI(title="OCR API")
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 # CORS settings (adjust origins as needed)
 origins = [
-    "http://localhost:5174",  # React frontend
+    #"http://localhost:5174",  # React frontend
     # Add other origins if needed
 ]
 
@@ -74,10 +75,6 @@ class PDFUploadResponse(BaseModel):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
 
 @app.post("/upload_pdf", response_model=PDFUploadResponse)
 async def upload_pdf(file: UploadFile = File(...)):
