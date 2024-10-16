@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: nebulaocr-core
+    env: docker
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: ""
