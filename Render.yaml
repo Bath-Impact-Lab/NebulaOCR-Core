@@ -3,7 +3,9 @@ services:
     name: nebulaocr-core
     env: python
     buildCommand:
-      - apt-get update && apt-get install -y poppler-utils libpoppler-cpp-dev && rm -rf /var/lib/apt/lists/*
+      - apt-get update && \
+        apt-get install -y poppler-utils libpoppler-cpp-dev pkg-config cmake && \
+        rm -rf /var/lib/apt/lists/*
       - pip install -r requirements.txt
     startCommand: "python main.py"
     pythonVersion: 3.12.7
