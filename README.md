@@ -4,17 +4,27 @@ NebulaOCR-Core is an optical character recognition (OCR) system designed to extr
 
 ## Installation
 
-To install the necessary dependencies, use the following command:
+You will need to install poppler ( https://poppler.freedesktop.org/ )
+
+To install the python dependencies, use the following command:
 ```sh
 pip install -r requirements.txt
 ```
 
-## Usage
+## Development
 
-To run the OCR on an image, use the following command:
+To run the OCR locally, use the following command:
 ```sh
- uvicorn main:app --host localhost --port 8080
+uvicorn main:app --host localhost --port 8080
 ```
+
+## Deploy
+To deploy to something like render using the Dockerfile:
+```sh
+docker build -t nebulaocr-core .
+docker run -it --rm nebulaocr-core
+```
+
 
 ## Contributing
 
