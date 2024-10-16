@@ -4,6 +4,7 @@ import os
 import shutil
 import uuid
 import logging
+import uvicorn
 from typing import List
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
@@ -69,6 +70,14 @@ class PDFUploadResponse(BaseModel):
     pdf_id: str
     pages: int
 
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 
 @app.post("/upload_pdf", response_model=PDFUploadResponse)
 async def upload_pdf(file: UploadFile = File(...)):

@@ -16,5 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the project files
 COPY . .
 
+EXPOSE 80
+
 # Command to run the OCR script (adjust as needed)
 CMD ["python3", "main.py"]
