@@ -3,5 +3,5 @@ services:
     name: nebulaocr-core
     env: docker
     dockerfilePath: Dockerfile
-    buildCommand: ""
-    startCommand: ""
+    buildCommand: 'docker build -t nebulaocr-core .'
+    startCommand: 'docker run -p 8000:8000 nebulaocr-core'
