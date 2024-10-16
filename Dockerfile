@@ -9,7 +9,7 @@ COPY requirements.txt .
 
 # Install poppler-utils and other dependencies
 RUN apt-get update && \
-    apt-get install -y poppler-utils && \
+    apt-get install -y poppler-utils libpoppler-cpp-dev  && \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the project files
