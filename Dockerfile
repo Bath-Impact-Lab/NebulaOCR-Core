@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 
 # Install Python dependencies with pip
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the rest of the project files
 COPY . .
