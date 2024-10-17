@@ -78,11 +78,6 @@ class PDFUploadResponse(BaseModel):
     pdf_id: str
     pages: int
 
-
-if __name__ == "__main__":
-    #port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-
 @app.post("/upload_pdf", response_model=PDFUploadResponse)
 async def upload_pdf(file: UploadFile = File(...)):
     logger.info(f"Received file upload with content type: {file.content_type}")
@@ -249,3 +244,7 @@ def cleanup():
 def ping():
     logger.info("Received ping request.")
     return 'Pong!'
+
+if __name__ == "__main__":
+    #port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=8000)
