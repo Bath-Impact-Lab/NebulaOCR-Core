@@ -28,8 +28,8 @@ logger = logging.getLogger(__name__)
 
 # CORS settings (adjust origins as needed)
 origins = [
-    "https://nebulaocr-www.onrender.com/",  # React frontend
-    # Add other origins if needed
+    "https://nebulaocr-www.onrender.com",
+    "https://nebula.hivebrain.ai",
 ]
 
 app.add_middleware(
