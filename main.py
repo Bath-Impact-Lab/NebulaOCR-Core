@@ -30,6 +30,7 @@ logger = logging.getLogger(__name__)
 origins = [
     "https://nebulaocr-www.onrender.com",
     "https://nebula.hivebrain.ai",
+    "*"
 ]
 
 app.add_middleware(
