@@ -80,8 +80,8 @@ class PDFUploadResponse(BaseModel):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    #port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 @app.post("/upload_pdf", response_model=PDFUploadResponse)
 async def upload_pdf(file: UploadFile = File(...)):
