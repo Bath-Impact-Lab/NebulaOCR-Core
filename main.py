@@ -19,7 +19,7 @@ from ocr_utils import (
     perform_ocr
 )
 
-app = FastAPI(title="OCR API")
+app = FastAPI(title="Nebula OCR API", description="API endpoint documentation for Nebula OCR")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 
 # CORS settings (adjust origins as needed)
 origins = [
-    #"http://localhost:5174",  # React frontend
+    "https://nebulaocr-www.onrender.com/",  # React frontend
     # Add other origins if needed
 ]
 
