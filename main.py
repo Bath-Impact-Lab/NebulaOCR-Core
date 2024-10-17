@@ -30,6 +30,12 @@ logger = logging.getLogger(__name__)
 origins = [
     "https://nebulaocr-www.onrender.com",
     "https://nebula.hivebrain.ai",
+    "http://localhost",
+    "http://localhost:8000",
+    "http://127.0.0.1",
+    "http://127.0.0.1:8000",
+    "http://0.0.0.0",
+    "http://0.0.0.0:8000",
     "*"
 ]
 
