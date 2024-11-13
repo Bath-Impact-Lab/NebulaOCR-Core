@@ -125,7 +125,7 @@ def format_text(text):
     print(text)
     text = re.sub(r'-\s*[\r\n]+\s*', '', text)
     sentences = re.split('(?<=[.!?]) +', text)
-    sentences = [s.capitalize() for s in sentences]
+    #sentences = [s.capitalize() for s in sentences]
     formatted_text = ' '.join(sentences)
     print(formatted_text)
     formatted_text = re.sub(r'\s+', ' ', formatted_text)
