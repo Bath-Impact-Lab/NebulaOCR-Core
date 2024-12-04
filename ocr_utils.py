@@ -12,7 +12,7 @@ from textblob import TextBlob
 # Configure Tesseract path if necessary
 # pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'  # Update as needed
 
-def convert_pdf_to_images(pdf_path, dpi=600):
+def convert_pdf_to_images(pdf_path, dpi=450):
     """
     Convert PDF to a list of PIL Image objects.
     """
