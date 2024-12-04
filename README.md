@@ -25,6 +25,10 @@ docker build -t nebulaocr-core .
 docker run -it --rm nebulaocr-core
 ```
 
+or for you own server
+```sh
+sudo docker-compose up -d --build
+```
 
 ## Contributing
 
